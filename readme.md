@@ -18,14 +18,16 @@ You may need to change file paths as necessary as each platform (windows, mac, l
 
 ## Usage
 
-From within your layout, you can load the module and distribute without worries. If the module can not be found, an error will be printed to the terminal. However, the layout will continue to load just fine - as long as your layout was not distributed with calls to any of the classes in the module.
+From within your layout, you can load the module and distribute without worries. The layout will continue to load just fine - as long as your layout was not distributed with calls to any of the classes in the module.
 
 Example:
 
 ```Squirrel
-fe.load_module("Debug");
+// Load Module
+local message = null;
+if (fe.load_module("Debug")) message = Message();
 
-local message = Message();
+// Usage For Development and Debugging
 message.send("This is a test.");
 message.send("Each message will automatically include a line return in the terminal.");
 ```
