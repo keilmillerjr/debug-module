@@ -1,5 +1,5 @@
-// Send a message to the terminal
-class Message {
+// Log messages
+class Log {
 	prefix="";
 	suffix="";
 	
