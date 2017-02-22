@@ -24,8 +24,7 @@ Example:
 
 ```Squirrel
 // Load Debug Module
-local log = null;
-if (fe.load_module("Debug")) log = Log();
+if (fe.load_module("Debug")) local log = Log();
 
 // Usage For Development or Production
 try { log.send("This will show if the Debug module is present, and will fallback safely."); } catch(e) {}
