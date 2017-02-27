@@ -20,11 +20,13 @@ You may need to change file paths as necessary as each platform (windows, mac, l
 
 From within your layout, you can load the module, debug, and distribute safely if you use a technique similar to the example provided.
 
+The debug module may be used within other modules if the debug module is loaded and log variable declared before other modules requiring its use.
+
 Example:
 
 ```Squirrel
 // Load Debug Module
-if (fe.load_module("Debug")) local log = Log();
+if (fe.load_module("Debug")) log <- Log();
 
 // Usage For Development or Production
 try { log.send("This will show if the Debug module is present, and will fallback safely."); } catch(e) {}
